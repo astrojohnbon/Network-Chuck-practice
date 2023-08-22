@@ -5,11 +5,12 @@
 print("Hello, welcome to networkchuck coffee!!")
 
 name = input("What is your name? \n")
+goodDeeds = int(input("How many good deeds have you done today?\n"))
 
-if name == "Ben":
+if name == "Ben" or name == "Patricia":
     evil_status = input("Are you evil?")
-    if evil_status == "yes":
-        print("You're not welcome here EVIL BEN! Get out!")
+    if evil_status == "yes" and goodDeeds < 4:
+        print("You're not welcome here" + name + "! Get out!")
         exit()
 else: 
     print("Hello " + name + ", thank you so much for coming in today")
